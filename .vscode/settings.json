@@ -1,0 +1,21 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ],
+  "editor.formatOnSave": true,
+  "path-intellisense.mappings": {
+    "@": "${workspaceRoot}/src",
+    "static": "${workspaceRoot}/static",
+    "~@": "${workspaceRoot}/src"
+  },
+}

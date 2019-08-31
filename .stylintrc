@@ -1,0 +1,14 @@
+ {
+  "blocks": false,
+  "brackets": "never",
+  "colons": "never",
+  "semicolons":"never",
+  "colors": {
+    "expect": "always"
+  },
+  "commaSpace": "always",
+  "commentSpace": "always",
+  "indentPref": 2,
+  "prefixVarsWithDollar": "always",
+  "mixed": "never",
+}
