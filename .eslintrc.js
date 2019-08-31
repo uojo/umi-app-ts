@@ -15,7 +15,9 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:promise/recommended',
     'plugin:flowtype/recommended',
-    'plugin:prettier/recommended', // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+    // 'plugin:prettier/recommended', // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+    'prettier',
+    'prettier/@typescript-eslint',
   ],
   plugins: ['flowtype', 'prettier'],
   parserOptions: {
