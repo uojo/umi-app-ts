@@ -12,6 +12,7 @@
     "lint:prettier:fix": "prettier --write \"src/**/*.js\" \"src/**/*.ts\" \"src/**/*.tsx\"",
     "lint:style": "stylelint 'src/**/*.less'",
     "lint:style:fix": "stylelint --fix 'src/**/*.less'",
+    "tsc": "./node_modules/.bin/tsc --noEmit",
     "precommit": "lint-staged"
   },
   "dependencies": {
