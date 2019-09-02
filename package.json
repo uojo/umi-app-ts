@@ -5,7 +5,7 @@
     "build": "umi build",
     "test": "umi test",
     "lint": "npm-run-all lint:ts lint:es",
-    "lint:es": "eslint --ext .js,.jsx,.ts,.tsx src mock tests",
+    "lint:es": "eslint --ext .js,.jsx,.ts,.tsx src mock",
     "lint:es:fix": "eslint --ext .js,.jsx,.ts,.tsx src mock --fix",
     "lint:ts": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
     "lint:ts:fix": "tslint --fix \"src/**/*.ts\" \"src/**/*.tsx\"",
