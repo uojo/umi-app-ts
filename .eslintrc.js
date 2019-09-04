@@ -15,7 +15,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:promise/recommended',
     'plugin:flowtype/recommended',
-    // 'plugin:prettier/recommended', // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+    'plugin:prettier/recommended', // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
     'prettier',
     'prettier/@typescript-eslint',
   ],
@@ -51,11 +51,20 @@ module.exports = {
     'getter-return': 2, // 强制 getter 函数中出现 return 语句
     'no-compare-neg-zero': 2, // 禁止与 -0 进行比较
     'no-return-await': 0,
-    'standard/no-callback-literal': 0
+    'standard/no-callback-literal': 0,
+    // 'prettier/prettier': 1
   },
   settings: {
     react: {
       version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
+    },
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@', './src']
+        ],
+        extensions: ['.js', '.ts', '.tsx', '.json'],
+      },
     },
   },
 };
