@@ -12,10 +12,14 @@
       "autoFix": true
     }
   ],
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": true,
   "editor.formatOnSave": true,
   "path-intellisense.mappings": {
     "@": "${workspaceRoot}/src",
     "static": "${workspaceRoot}/static",
     "~@": "${workspaceRoot}/src"
   },
+  "eslint.packageManager": "yarn",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
