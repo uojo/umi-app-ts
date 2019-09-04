@@ -26,5 +26,11 @@ class Component<P1, S1> {
 
 const pageA: FC = ({ location }) => {
   const context = location
-  return <div>hello</div>
+  return (
+    <div>
+      <div>
+        <span>hello</span>
+      </div>
+    </div>
+  )
 }

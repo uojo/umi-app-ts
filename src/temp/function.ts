@@ -11,6 +11,7 @@
 }
 
 {
+  // error:tslint
   const funcA = (e: any): null => {
     return e.length
   }
