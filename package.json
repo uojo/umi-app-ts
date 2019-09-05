@@ -5,14 +5,16 @@
     "build": "umi build",
     "test": "umi test",
     "lint": "npm-run-all lint:ts lint:es",
+    "lint:commit": "eslint src mock --ext .js,.tsx --ignore-pattern src/lab && tslint 'src/**/*.+(ts|tsx)' --exclude 'src/lab/**'",
+    "lint:commit:es": "eslint --ignore-pattern src/lab 'src/**/*.+(js|tsx)' 'mock/**/*.+(js|tsx)'",
     "lint:es": "eslint --ext .js,.jsx,.ts,.tsx src mock",
     "lint:es:fix": "eslint --ext .js,.jsx,.ts,.tsx src mock --fix",
-    "lint:ts": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "lint:ts": "tslint 'src/**/*.+(ts|tsx)'",
     "lint:ts:fix": "tslint --fix \"src/**/*.ts\" \"src/**/*.tsx\"",
     "lint:prettier:fix": "prettier --write \"src/**/*.js\" \"src/**/*.ts\" \"src/**/*.tsx\"",
     "lint:style": "stylelint 'src/**/*.less'",
     "lint:style:fix": "stylelint --fix 'src/**/*.less'",
-    "tsc": "./node_modules/.bin/tsc --noEmit"
+    "tsc": "tsc --noEmit"
   },
   "dependencies": {
     "react": "^16.7.0",
@@ -39,7 +41,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
-    "husky": "^0.14.3",
+    "husky": "^3.0.5",
     "lint-staged": "^7.2.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.16.4",
@@ -61,7 +63,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged & npm run lint",
+      "pre-commit": "lint-staged & npm run lint:commit",
       "commit-msg": "node scripts/commit.validate.js -E HUSKY_GIT_PARAMS"
     }
   },
