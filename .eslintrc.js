@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   env: {
     browser: true,
-    jest: true
+    jest: true,
   },
   parser: '@typescript-eslint/parser',
   extends: [
@@ -40,9 +40,10 @@ module.exports = {
     'react/prop-types': 0,
     'react/display-name': 0,
     'comma-dangle': ['error', 'only-multiline'],
-    'no-console': ['error', {
-      'allow': ['warn', 'error', 'info']
-    }],
+    'no-console': 0,
+    // 'no-console': ['error', {
+    //   'allow': ['warn', 'error', 'info']
+    // }],
     'no-confusing-arrow': 0,
     /** custom rules */
     'getter-return': 2, // 强制 getter 函数中出现 return 语句
@@ -57,11 +58,9 @@ module.exports = {
     },
     'import/resolver': {
       alias: {
-        map: [
-          ['@', './src']
-        ],
+        map: [['@', './src']],
         extensions: ['.js', '.ts', '.tsx', '.json'],
       },
     },
   },
-};
+}

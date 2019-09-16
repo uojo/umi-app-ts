@@ -1,15 +1,10 @@
 {
   "defaultSeverity": "error",
-  "extends": [
-    "tslint-eslint-rules",
-    "tslint-react"
-  ],
+  "extends": ["tslint-eslint-rules", "tslint-react"],
   "jsRules": false,
   "rules": {
-    "no-any": true,
-    "ban-types": [true, ["Object", "Use {} instead."],
-      ["String"]
-    ],
+    "no-any": false,
+    "ban-types": [true, ["Object", "Use {} instead."], ["String"]],
     "no-construct": true,
     "eofline": true,
     "no-debugger": true,

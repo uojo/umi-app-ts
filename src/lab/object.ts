@@ -32,7 +32,10 @@ const o = {
     return a + b
   }
 
-  type A = { a: number; b: number }
+  interface A {
+    a: number
+    b: number
+  }
   function funcB({ a, b }: A): number {
     return a + b
   }
