@@ -13,13 +13,14 @@
     }
   ],
   "editor.formatOnPaste": false,
-  "editor.formatOnType": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.formatOnSave": false,
   "path-intellisense.mappings": {
     "@": "${workspaceRoot}/src",
     "static": "${workspaceRoot}/static",
     "~@": "${workspaceRoot}/src"
   },
   "eslint.packageManager": "yarn",
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.autoFixOnSave": true
 }
