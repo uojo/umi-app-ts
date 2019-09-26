@@ -1,4 +1,5 @@
 {
+  // lint，测试是否被校验
   const a: [string, string[]] = [1, ['b']]
 
   const b = a.map(e => {
@@ -48,4 +49,9 @@
   for (let items of c.values()) {
     console.log(items)
   }
+}
+
+{
+  const a: (Promise<any> | boolean)[] = [Promise.resolve(1), false]
+  const b = a.filter(e => !!e)
 }
